@@ -54,8 +54,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       options: { noTargeting: true },
     });
 
-    // Generate the static paths for all pages in Builde
-    r
+    // Generate the static paths for all pages in Builder
     const paths = pages
       .map((page) => {
         const url = page.data?.url;
@@ -94,7 +93,7 @@ const Page: React.FC<PageProps> = ({ page }) => {
       <Head>
         <title>{pageTitle}</title>
       </Head>
-      <BuilderComponent model="page" content={page} />
+      <BuilderComponent model="page" />
     </>
   );
 };
