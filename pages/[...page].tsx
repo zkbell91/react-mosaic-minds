@@ -60,7 +60,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         const url = page.data?.url;
         return url ? { params: { page: url.split('/').filter(Boolean) } } : null;
       })
-      .filter(Boolean);
+      .filter((path) => path !== null); // Ensure no null values
 
     console.log('Generated static paths:', paths);
 
