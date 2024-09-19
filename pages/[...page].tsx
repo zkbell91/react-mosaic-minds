@@ -54,13 +54,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
       options: { noTargeting: true },
     });
 
-    // Generate the static paths for all pages in Builder
+    // Generate the static paths for all pages in Builde
+    r
     const paths = pages
       .map((page) => {
         const url = page.data?.url;
         return url ? { params: { page: url.split('/').filter(Boolean) } } : null;
       })
-      .filter((path) => path !== null); // Ensure no null values
+      .filter((path): path is { params: { page: string[] } } => path !== null); // Ensure no null values
 
     console.log('Generated static paths:', paths);
 
