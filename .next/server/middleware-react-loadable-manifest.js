@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"src/builder-registry.ts -> ./components/Counter/Counter\":{\"id\":\"src/builder-registry.ts -> ./components/Counter/Counter\",\"files\":[\"static/chunks/src_components_Counter_Counter_tsx.js\"]}}"
